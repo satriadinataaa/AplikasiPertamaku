@@ -1,10 +1,12 @@
 import React, {Component} from 'react';  
-import {Image, StyleSheet, Text,View} from 'react-native';
-
+import {Image, StyleSheet, Text,View,ScrollView} from 'react-native';
+import macbook from './macbook.jpg';
 
 const App = () =>{
   return(
+    
     <View>
+      
       <View  style={{ height:100, backgroundColor:'#0d1b36' }}></View>
       <View  style={{ height:100, backgroundColor:'#2e5094', marginHorizontal:40,borderRadius:20,marginVertical: -50,padding:10,flexDirection: 'row'}}>
         
@@ -15,10 +17,30 @@ const App = () =>{
           <View style={{ flexDirection:'column' }}>
           <Text style={{ marginLeft:10,fontSize:18,marginTop:20,color:'white' }}>Satriadinata</Text>
           <Text style={{ marginLeft:10,fontSize:9,color:'white' }}>Saldo: Rp 100.000.000</Text>
+          
           </View>
+          
       </View>
-      
+      <ScrollView style={{marginTop:60}}>
+        <View style={{ 
+                   marginLeft:10,
+                   padding:12 , 
+                   backgroundColor:'#F2F2F2',
+                   width:212,
+                   borderRadius:8 }} >
+          <Image source={macbook} 
+                  style={{width:188,height:107,borderRadius:8 }}
+                  ></Image>
+          <Text style={{ fontSize:14,fontWeight: 'bold', marginTop:16 }} >New Macbook Pro 2019</Text>
+          <Text style={{ fontSize:12,fontWeight: 'bold', color:"#F2994A",marginTop:12 }} >Rp. 25.000.000</Text>
+          <Text style={{ fontSize:12,fontWeight: '300', marginTop:12 }} >Jakarta Barat</Text>
+          <View style={{ backgroundColor:"#6FCF97",paddingVertical:6,borderRadius:25,marginTop:20}}>
+            <Text style={{ fontSize:14,fontWeight:'600',color:'white',textAlign:"center" }}>Beli</Text>
+          </View>
+        </View>
+      </ScrollView>
     </View>
+   
   );
 };
 
@@ -37,6 +59,7 @@ const Photo =()=>{
 
 const style = StyleSheet.create({
   text:{
+    
     fontWeight: 'bold',
     fontSize: 18
   },
