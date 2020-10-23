@@ -28,8 +28,8 @@ class CounterClass extends Component{
                 number: this.state.number +1
             })}/>
             <Text style={{ marginTop:1 }}></Text>
-                <Button title="Tambah" color="#b30b0b" onPress={()=> this.setState({
-                number: this.state.number +1
+                <Button title="Kurang" color="#b30b0b" onPress={()=> this.setState({
+                number: this.state.number -1
             })}/>
             </View>
           
