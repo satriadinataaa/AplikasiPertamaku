@@ -6,10 +6,15 @@ const Counter = () => {
     return(
         <View>
              <Text>{angka}</Text>
-            <View style={{ flexDirection:'column'  }}>
-                <Button title="Tambah"  onPress={()=> setAngka(angka+1)}/>
-                <Text style={{ marginTop:1 }}></Text>
-                <Button title="Kurang"  color="#b30b0b" onPress={()=> setAngka(angka-1)}/>
+            <View style={{ flexDirection:'row', marginTop:10 }}>
+                <View style={{ width:"45%" }}>
+                    <Button title="Kurang"  color="#b30b0b" onPress={()=> setAngka(angka-1)}/>
+                </View>
+                <View style={{ width:"10%" }}></View>
+                <View style={{ width:"45%" }}>
+                    <Button title="Tambah"  onPress={()=> setAngka(angka+1)}/>
+                </View>
+               
             </View>
         </View>
     )
@@ -23,14 +28,19 @@ class CounterClass extends Component{
         return(
             <View>
             <Text style={styles.judulText}>{this.state.number}</Text>
-            <View style={{ flexDirection:'column' }}>
-                <Button title="Tambah" onPress={()=> this.setState({
-                number: this.state.number +1
-            })}/>
-            <Text style={{ marginTop:1 }}></Text>
-                <Button title="Kurang" color="#b30b0b" onPress={()=> this.setState({
-                number: this.state.number -1
-            })}/>
+            
+            <View flexDirection="row">
+                <View style={{ width:"45%" }}>
+                    <Button title="Kurang" color="#b30b0b" onPress={()=> this.setState({
+                    number: this.state.number -1
+                    })}/>
+                 </View>
+                 <View style={{ width:"10%" }}></View>
+                 <View style={{ width:"45%" }}>
+                    <Button title="Tambah" onPress={()=> this.setState({
+                        number: this.state.number +1
+                    })}/>
+                 </View>
             </View>
           
            

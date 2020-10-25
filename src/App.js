@@ -7,6 +7,7 @@ import Flexbox from './pages/FlexBox';
 import Position from './pages/Position';
 import PropsDinamis from './pages/PropsDinamis';
 import StateDinamis from './pages/StateDinamis';
+import Communication from './pages/Communication';
 const App = () =>{
   return(
     
@@ -16,13 +17,14 @@ const App = () =>{
       <Profile/>
       
     
-      <ScrollView style={{ marginTop:60, marginBottom:50 }}>
+      <ScrollView style={{ marginTop:80 }}>
       <PropsDinamis/>
-      <StateDinamis/>
-        <Barang/>
-        
-        <Position/>
-         <Flexbox />
+            {/*<StateDinamis/>*/}
+
+      {/*<Barang/>*/}
+        <Communication/>
+        {/*<Position/>*/}
+         
       </ScrollView>
     </View>
    
